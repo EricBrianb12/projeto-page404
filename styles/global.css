@@ -16,7 +16,8 @@ body {
   height: 100vh;
   padding-inline: 100px;
   margin: 0 auto;
-  background: url("../assets/img/bg-preenchido.png") center;
+  /* background: url("../assets/img/bg-preenchido.png") repeat center; */
+  background-color: #0b0f12;
   background-size: cover;
   color: #fff;
   font-size: 1.6rem;
@@ -39,8 +40,4 @@ a {
   body {
     padding-inline: 20px;
   }
-}
-
-.text-reveal {
-  font-kerning: none;
 }

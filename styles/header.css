@@ -8,8 +8,9 @@
 
 .logo {
   font-size: 3rem;
-  letter-spacing: .03rem;
+  letter-spacing: 0.03rem;
   font-weight: 900;
+  display: block;
 }
 
 .menu,
@@ -19,6 +20,7 @@
   flex-wrap: wrap;
   gap: 30px;
   list-style: none;
+  z-index: 999;
 }
 
 .menu {
@@ -34,7 +36,11 @@
   font-weight: normal;
   font-size: 1.2rem;
   text-transform: uppercase;
-  letter-spacing: .03rem;
+  letter-spacing: 0.03rem;
+}
+
+.menu a {
+  padding: 15px 8px;
 }
 
 @media (max-width: 800px) {
@@ -50,5 +56,15 @@
 
   .menu {
     display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding-bottom: 40px;
+  }
+
+  .menu-mobile {
+    gap: 10px;
   }
 }

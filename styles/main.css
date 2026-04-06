@@ -14,7 +14,23 @@ main {
   -webkit-background-clip: text;
   color: transparent;
   mix-blend-mode: hard-light;
-  line-height: .8;
+  line-height: 0.8;
+}
+
+.text-reveal,
+.text-reveal .char {
+  background: linear-gradient(#ffffff3b, #ffffff00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-reveal {
+  mix-blend-mode: hard-light;
+}
+
+.text-reveal .char {
+  display: inline-block;
 }
 
 video {
@@ -24,6 +40,7 @@ video {
   width: 100%;
   max-width: 590px;
   mix-blend-mode: lighten;
+  filter: contrast(1);
 }
 
 .content-subtitle {
@@ -34,6 +51,7 @@ video {
   color: #b6b6b6;
   text-transform: uppercase;
   mix-blend-mode: screen;
+  z-index: 999;
 }
 
 .content-text {
@@ -44,4 +62,29 @@ video {
   margin-bottom: 40px;
   max-width: 47ch;
   color: #717171;
+  z-index: 999;
+}
+
+@media (max-width: 600px) {
+  .content-title {
+    font-size: 10rem;
+  }
+
+  .content-subtitle {
+    font-size: 3rem;
+  }
+
+  .content-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .content-title {
+    padding-left: 25px;
+    font-size: 8rem;
+  }
+  video {
+    margin-right: 0px;
+  }
 }

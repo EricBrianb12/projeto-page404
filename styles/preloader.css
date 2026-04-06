@@ -1,0 +1,43 @@
+body {
+  overflow: hidden;
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.preloader-top,
+.preloader-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #0b0b0b;
+}
+
+.preloader-top {
+  top: 0;
+}
+
+.preloader-bottom {
+  bottom: 0;
+}
+
+.preloader-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preloader-text {
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
