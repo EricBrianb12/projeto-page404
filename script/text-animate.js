@@ -20,7 +20,7 @@ function initPageAnimations() {
     autoAlpha: 1,
   });
 
-  gsap.set(".logo, .btn-secondary, .menu li", {
+  gsap.set(".logo, .btn-secondary, .menu li, .menu-mobile", {
     y: -20,
     opacity: 0,
   });
@@ -69,6 +69,17 @@ function initPageAnimations() {
     )
     .to(
       ".menu li",
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power2.out",
+      },
+      0,
+    )
+    .to(
+      ".menu-mobile",
       {
         y: 0,
         opacity: 1,
