@@ -2,17 +2,20 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <title>Page not found | 404</title>
-  <link rel="stylesheet" href="./styles/style.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles/style.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 </head>
 
 <body>
   <div id="fullPage"></div>
+
   <div class="preloader">
     <div class="preloader-top"></div>
     <div class="preloader-bottom"></div>
@@ -21,58 +24,60 @@
     </div>
   </div>
 
-  <header class="header">
-    <a href="#" class="logo">LOGO.</a>
+  <div class="page-content">
+    <header class="header">
+      <a href="#" class="logo">LOGO.</a>
 
-    <nav>
-      <ul class="menu">
-        <li><a href="#" data-text="Home">Home</a></li>
-        <li><a href="#" data-text="About">About</a></li>
-        <li><a href="#" data-text="Services">Services</a></li>
-        <li><a href="#" data-text="Contact">Contact</a></li>
-      </ul>
+      <nav>
+        <ul class="menu">
+          <li><a href="#" data-text="Home">Home</a></li>
+          <li><a href="#" data-text="About">About</a></li>
+          <li><a href="#" data-text="Services">Services</a></li>
+          <li><a href="#" data-text="Contact">Contact</a></li>
+        </ul>
 
-      <ul class="menu-mobile">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Login</a></li>
-      </ul>
-    </nav>
+        <ul class="menu-mobile">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </nav>
 
-    <a href="#" class="btn-secondary">Login</a>
-  </header>
+      <a href="#" class="btn-secondary">Login</a>
+    </header>
 
-  <main class="main-content">
-    <h1 class="content-title text-reveal">404</h1>
+    <main class="main-content">
+      <h1 class="content-title text-reveal">404</h1>
 
-    <video autoplay muted loop playsinline>
-      <source src="./assets/teste.webm" type="video/webm">
-      <source src="./assets/teste.mp4" type="video/mp4">
-    </video>
+      <video autoplay muted loop playsinline>
+        <source src="./assets/teste.webm" type="video/webm" />
+        <source src="./assets/teste.mp4" type="video/mp4" />
+      </video>
 
-    <h2 class="content-subtitle subtitle-reveal">Page Not Found</h2>
-    <p class="content-text">I think you're lost. Click the button below to be redirected to the correct page.</p>
-    <a href="#" class="btn-primary">
-      <span class="btn-primary-text"> Heeeeelp!!! </span>
-    </a>
-  </main>
+      <h2 class="content-subtitle subtitle-reveal">Page Not Found</h2>
 
+      <p class="content-text">
+        I think you're lost. Click the button below to be redirected to the correct page.
+      </p>
+
+      <a href="#" class="btn-primary">
+        <span class="btn-primary-text">Heeeeelp!!!</span>
+      </a>
+    </main>
+  </div>
 
   <script src="https://unpkg.com/split-type" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js" defer></script>
   <script src="https://unpkg.com/grained/grained.min.js" defer></script>
 
-  <!-- <script src="script/bg-animate.js" defer></script>
+  <script src="script/bg-animate.js" defer></script>
   <script src="script/text-animate.js" defer></script>
+  <script src="script/menu-hover.js" defer></script>
   <script src="script/preloader.js" defer></script>
-  <script src="script/menu-hover.js" defer></script> -->
 
-  <script src="./script/script.min.js" defer></script>
-
+  <!-- <script src="./script/script.min.js" defer></script> -->
 </body>
-
-
 
 </html>

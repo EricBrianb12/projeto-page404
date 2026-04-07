@@ -1,21 +1,20 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 document.querySelectorAll(".menu a").forEach((link) => {
+  let interval = null;
+
   link.addEventListener("mouseenter", () => {
     let iteration = 0;
-    const originalText = link.dataset.text;
+    const originalText = link.dataset.text || link.textContent;
 
-    const interval = setInterval(() => {
+    clearInterval(interval);
+
+    interval = setInterval(() => {
       link.textContent = originalText
         .split("")
         .map((letter, index) => {
-          if (index < iteration) {
-            return originalText[index];
-          }
-
-          if (letter === " ") {
-            return " ";
-          }
+          if (letter === " ") return " ";
+          if (index < iteration) return originalText[index];
 
           return letters[Math.floor(Math.random() * letters.length)];
         })
@@ -23,18 +22,25 @@ document.querySelectorAll(".menu a").forEach((link) => {
 
       if (iteration >= originalText.length) {
         clearInterval(interval);
+        link.textContent = originalText;
       }
 
       iteration += 1 / 3;
     }, 30);
   });
+
+  link.addEventListener("mouseleave", () => {
+    clearInterval(interval);
+    link.textContent = link.dataset.text || link.textContent;
+  });
 });
 
 // animação do botão principal no hover
 
+const button = document.querySelector(".btn-primary");
 const buttonText = document.querySelector(".btn-primary-text");
 
-if (buttonText) {
+if (button && buttonText) {
   const splitButton = new SplitType(buttonText, { types: "chars" });
 
   gsap.set(splitButton.chars, {
@@ -43,7 +49,7 @@ if (buttonText) {
 
   let waveAnimation;
 
-  buttonText.addEventListener("mouseenter", () => {
+  button.addEventListener("mouseenter", () => {
     if (waveAnimation) waveAnimation.kill();
 
     waveAnimation = gsap.to(splitButton.chars, {
@@ -56,7 +62,7 @@ if (buttonText) {
     });
   });
 
-  buttonText.addEventListener("mouseleave", () => {
+  button.addEventListener("mouseleave", () => {
     if (waveAnimation) waveAnimation.kill();
 
     gsap.to(splitButton.chars, {

@@ -1,5 +1,17 @@
 window.addEventListener("load", () => {
-  const splitLoader = new SplitType(".preloader-text", { types: "chars" });
+  const loaderText = document.querySelector(".preloader-text");
+  const preloader = document.querySelector(".preloader");
+
+  if (!loaderText || !preloader) {
+    document.body.style.overflow = "auto";
+
+    if (pageIntroTimeline) {
+      pageIntroTimeline.play();
+    }
+    return;
+  }
+
+  const splitLoader = new SplitType(loaderText, { types: "chars" });
 
   gsap.set(splitLoader.chars, {
     display: "inline-block",
@@ -17,8 +29,12 @@ window.addEventListener("load", () => {
   const tl = gsap.timeline({
     delay: 2,
     onComplete: () => {
+      preloader.remove();
       document.body.style.overflow = "auto";
-      document.querySelector(".preloader").remove();
+
+      if (pageIntroTimeline) {
+        pageIntroTimeline.play();
+      }
     },
   });
 
